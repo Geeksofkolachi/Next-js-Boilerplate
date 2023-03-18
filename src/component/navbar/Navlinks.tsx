@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 // import { NavLink } from 'react-router-dom';
@@ -5,24 +6,24 @@ import { style } from './Style';
 
 const MENU_ITEMS = [
   { id: '/', label: 'Home' },
-  {
-    id: 'News',
-    label: 'News',
-    submenu: true,
-    // menuItems: [
-    //   {
-    //     name: 'about-us',
-    //     label: 'About Us',
-    //   },
-    //   {
-    //     name: 'contact-us',
-    //     label: 'contact Us',
-    //   },
-    // ],
-  },
-  { id: '/login', label: 'About Us' },
+  // {
+  //   id: 'News',
+  //   label: 'News',
+  //   submenu: true,
+  //   // menuItems: [
+  //   //   {
+  //   //     name: 'about-us',
+  //   //     label: 'About Us',
+  //   //   },
+  //   //   {
+  //   //     name: 'contact-us',
+  //   //     label: 'contact Us',
+  //   //   },
+  //   // ],
+  // },
+  { id: '/Feature', label: 'Feature' },
+  { id: '/About', label: 'About Us' },
   { id: 'Contact', label: 'Contact Us' },
-  { id: 'Blogs', label: 'Blogs' },
 ];
 
 const Navlinks = () => {
@@ -31,6 +32,7 @@ const Navlinks = () => {
       {MENU_ITEMS?.map((item, ind) => {
         return (
           <div className="group relative" key={ind}>
+            <Link href={item.id} />
             {/* <NavLink
               to={item.id}
               key={ind}
