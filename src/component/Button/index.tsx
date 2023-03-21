@@ -1,6 +1,6 @@
 import React from 'react';
 
-import type { ButtonType } from '@/@types';
+import type { ButtonType } from 'src/types';
 
 const Button: React.FC<ButtonType> = ({ onClick, btnText, btnStyle }) => {
   return (

@@ -1,16 +1,10 @@
-// import { useRouter } from 'next/router';
-
-import { Meta } from '@/layouts/Meta';
-
-// import { Main } from '@/templates/Main';
-import Header from './Header';
+import { Meta } from 'src/layouts/Meta';
+import Header from 'src/pages/Header';
 
 const Index = () => {
-  // const router = useRouter();
-
   return (
     <>
-      <Meta title="Joshua Tree Academy" description="Description yahan" />
+      <Meta title='Joshua Tree Academy' description='Description yahan' />
       <Header />
     </>
   );

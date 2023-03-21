@@ -1,14 +1,14 @@
+import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React from 'react';
 
-import type { IProps } from '@/@types';
-import { MENU_ITEMS } from '@/constant';
+import { MENU_ITEMS } from 'src/constant';
+import type { IProps } from 'src/types';
 
 const MobileScreen: React.FC<IProps> = ({ navbarOpen, setNavbarOpen }) => {
   const router = useRouter();
   return (
-    <div className={`fixed top-0 m-0 h-screen w-full bg-white lg:hidden`}>
+    <div className={'fixed top-0 m-0 h-screen w-full bg-white lg:hidden'}>
       <ul
         className={`bottom-0 mt-[76px] h-screen translate-y-0 list-none flex-col transition duration-500 ${
           navbarOpen ? 'left-0' : 'left-[-100%]'
