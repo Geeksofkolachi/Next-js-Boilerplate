@@ -1,55 +1,33 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable tailwindcss/no-custom-classname */
 
+import Image from 'next/image';
 import React from 'react';
 import { FaMixer, FaStream } from 'react-icons/fa';
 
-// import Button from '@/component/Button';
-import MobileScreen from '@/component/navbar/MobileScreen';
-import Navlinks from '@/component/navbar/Navlinks';
+import Button from '@/component/Button';
+import MobileScreen from '@/component/Navbar/MobileScreen';
+import Navlinks from '@/component/Navbar/Navlinks';
+import Logo from '@/public/assets/Logo/Logo.png';
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const [sticky, setSticky] = React.useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY >= 90) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  window.addEventListener('scroll', handleScroll);
-
-  // React.useEffect(() => {
-  //   const handleScroll = () => {
-  //     setSticky(window.scrollY > 200);
-  //   };
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-  // console.log(sticky);
   return (
     <>
       <nav
-        className={`fixed inset-x-0 top-0 z-30 mx-auto flex
-         justify-between bg-gray-50 p-2 px-4 shadow-md backdrop-blur-md transition-all duration-500 ease-in lg:px-10 
-         ${sticky ? '-top-2' : 'top-0'}`}
+        className={
+          'fixed inset-x-0 top-0 z-30 mx-auto flex items-center justify-between bg-gray-50 p-3 shadow-md backdrop-blur-md lg:justify-around'
+        }
       >
-        <div>
-          <h3 className="text-primary-zinc flex items-center px-1 font-sans text-lg font-semibold">
-            Joshua Tree
-          </h3>
-          <h3 className="text-primary-zinc -mt-3 flex items-center font-sans text-2xl font-bold ">
-            Academy
-          </h3>
+        <div className="w-36 items-center lg:w-44">
+          <Image src={Logo} alt="image" />
         </div>
-
-        <div className="flex items-center gap-4 lg:gap-14">
-          <ul className="active:text-red hidden items-center space-x-12 lg:flex">
+        <div className="flex items-center ">
+          <ul className="hidden items-center space-x-8 lg:flex">
             <Navlinks />
           </ul>
-          {/* <Button btnText="Download App" /> */}
+          <Button btnText="Download App" btnStyle="lg:ml-6 mr-4" />
           <div className="cursor-pointer">
             {navbarOpen ? (
               <FaMixer

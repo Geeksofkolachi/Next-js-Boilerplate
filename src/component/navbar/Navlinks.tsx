@@ -4,9 +4,10 @@ import React from 'react';
 
 const MENU_ITEMS = [
   { id: '/', label: 'Home' },
+  { id: '/AboutUs', label: 'About Us' },
   { id: '/Features', label: 'Feature' },
-  { id: '/About', label: 'About Us' },
-  { id: 'Contact', label: 'Contact Us' },
+  { id: '/Blog', label: 'Blog' },
+  { id: '/ContactUs', label: 'Contact Us' },
 ];
 
 const Navlinks = () => {

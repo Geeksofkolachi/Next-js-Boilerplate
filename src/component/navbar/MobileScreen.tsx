@@ -1,4 +1,3 @@
-/* eslint-disable tailwindcss/no-custom-classname */
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
@@ -13,13 +12,9 @@ interface IProps {
 const MobileScreen: React.FC<IProps> = ({ navbarOpen, setNavbarOpen }) => {
   const router = useRouter();
   return (
-    <>
-      {/* <div
-       className={`duration-400 fixed top-16 m-0 h-screen w-full bg-white transition-all lg:hidden`}
-     > */}
-
+    <div className={`fixed top-0 m-0 h-screen w-full bg-white lg:hidden`}>
       <ul
-        className={`fixed bottom-0 top-16 h-screen w-full list-none flex-col justify-center  ${
+        className={`bottom-0 mt-[76px] h-screen translate-y-0 list-none flex-col transition duration-500 ${
           navbarOpen ? 'left-0' : 'left-[-100%]'
         }`}
       >
@@ -29,7 +24,7 @@ const MobileScreen: React.FC<IProps> = ({ navbarOpen, setNavbarOpen }) => {
               <Link href={item.id}>
                 <div onClick={() => setNavbarOpen(false)}>
                   <li
-                    className={`mx-auto flex cursor-pointer divide-y border-b-2 border-solid p-5 active:text-green-700 ${
+                    className={`active:text-primary mx-auto flex cursor-pointer divide-y border-b-2 border-solid p-5 ${
                       router.pathname === item.id
                         ? 'text-green-700'
                         : 'text-black'
@@ -44,8 +39,7 @@ const MobileScreen: React.FC<IProps> = ({ navbarOpen, setNavbarOpen }) => {
           );
         })}
       </ul>
-      {/* </div> */}
-    </>
+    </div>
   );
 };
 
