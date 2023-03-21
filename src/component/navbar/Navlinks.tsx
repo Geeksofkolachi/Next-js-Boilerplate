@@ -20,8 +20,8 @@ const Navlinks = () => {
           <div key={ind}>
             <Link href={item.id}>
               <li
-                className={`flex cursor-pointer font-semibold transition duration-300 hover:scale-105 
-                           hover:text-green-700 ${
+                className={`flex cursor-pointer font-semibold 
+                           ${
                              router.pathname === item.id
                                ? 'text-green-700'
                                : 'text-black'

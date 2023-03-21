@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
       <nav
         className={
-          'fixed inset-x-0 top-0 z-30 mx-auto flex items-center justify-between bg-gray-50 p-3 shadow-md backdrop-blur-md lg:justify-around'
+          'fixed inset-x-0 top-0 z-30 mx-auto flex items-center justify-between bg-white  p-4 backdrop-blur-md lg:justify-around'
         }
       >
         <div className="w-36 items-center lg:w-44">
