@@ -2,12 +2,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 
+import type { IProps } from '@/@types';
 import { MENU_ITEMS } from '@/constant';
-
-interface IProps {
-  navbarOpen: boolean;
-  setNavbarOpen: (open: boolean) => void;
-}
 
 const MobileScreen: React.FC<IProps> = ({ navbarOpen, setNavbarOpen }) => {
   const router = useRouter();
