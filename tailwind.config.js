@@ -48,6 +48,7 @@ const colors = {
   },
 };
 
+// import Bg from "../Joshua Web/public/assets/images/BG.png" 
 module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -64,6 +65,7 @@ module.exports = {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui'],
       },
       backgroundImage: {
+        'hero-bg': "url('/assets/images/BG.png')",
         // add background image here. eg:
         // 'hero-pattern': "url('#')",
         // 'footer-texture': "url(#')",
