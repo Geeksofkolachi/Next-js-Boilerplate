@@ -11,6 +11,7 @@
     "alwaysStrict": true,
     "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
+
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -22,26 +23,28 @@
     "target": "es2017",
     "outDir": "out",
     "sourceMap": true,
+
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "checkJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+
     "jsx": "preserve",
     "noEmit": true,
     "isolatedModules": true,
     "incremental": true,
-    "paths": {
-      "src/*": ["./src/*"],
-      "public/*": ["./public/*"]
-    },
 
     // Load types
     "types": ["vitest/globals"],
 
     // Path aliases
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/public/*": ["./public/*"]
+    },
 
     // Editor support
     "plugins": [
@@ -57,12 +60,9 @@
     "**/*.e2e.ts"
   ],
   "include": [
-    "app/**/*",
-    "src/**/*",
-    "assets.d.ts",
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next-env.d.ts",
     ".storybook/*.ts",
     ".next/types/**/*.ts",
     "**/*.mts"
