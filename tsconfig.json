@@ -1,8 +1,9 @@
+/* eslint-disable jsonc/sort-keys */
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "removeComments": true,
     "preserveConstEnums": true,
@@ -17,38 +18,53 @@
     "noUnusedParameters": true,
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
-    "target": "es6",
+
+    "target": "es2017",
     "outDir": "out",
-    "declaration": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": false,
+    "allowJs": true,
+    "checkJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "preserve",
     "noEmit": true,
     "isolatedModules": true,
     "incremental": true,
-    "baseUrl": ".",
     "paths": {
       "src/*": ["./src/*"],
       "public/*": ["./public/*"]
     },
+
+    // Load types
+    "types": ["vitest/globals"],
+
+    // Path aliases
+    "baseUrl": ".",
+
+    // Editor support
     "plugins": [
       {
         "name": "next"
       }
     ]
   },
-  "exclude": ["./out/**/*", "./node_modules/**/*", "cypress/**/*.ts"],
+  "exclude": [
+    "./out/**/*",
+    "./node_modules/**/*",
+    "**/*.spec.ts",
+    "**/*.e2e.ts"
+  ],
   "include": [
     "app/**/*",
     "src/**/*",
-    "next-env.d.ts",
     "assets.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    "next-env.d.ts",
+    ".storybook/*.ts",
+    ".next/types/**/*.ts",
+    "**/*.mts"
   ]
 }
